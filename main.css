@@ -6,27 +6,26 @@
 
 .task-input {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 60px;
     width: 70%;
-    margin-top: 20px;
+    margin-top: 50px;
     margin-left: 200px;
     background-color: cornflowerblue;
     border-radius: 5px 5px 0 0;
+    box-shadow: 3px 3px 3px grey;
 }
 #task {
-    justify-content: center;
     width: 30%;
     height: 30px;
+    font-size: 20px;
 }
 button {
     flex-direction: column;
-    position: relative;
-    left: 900px;
-    top: -45px;
     text-transform: uppercase;
+    margin-left: 20px;
     height: 30px;
     width: 50px;
 }
@@ -38,8 +37,10 @@ button {
     height: 500px;
     background-color: cornflowerblue;
     margin-left: 200px;
+    margin-top: 10px;
     padding-top: 50px;
     border-radius: 0 0 5px 5px;
+    box-shadow: 3px 3px 3px grey;
 }
 
 .to-do, .doing, .done {
