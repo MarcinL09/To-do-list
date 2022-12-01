@@ -1,0 +1,22 @@
+.task-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+}
+#task {
+    justify-content: center;
+    width: 30%;
+    height: 30px;
+}
+button {
+    flex-direction: column;
+    position: relative;
+    left: 1000px;
+    top: -45px;
+    text-transform: uppercase;
+    height: 30px;
+    width: 50px;
+}
