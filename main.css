@@ -1,10 +1,20 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .task-input {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 60px;
-    width: 100%;
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 200px;
+    background-color: cornflowerblue;
+    border-radius: 5px 5px 0 0;
 }
 #task {
     justify-content: center;
@@ -14,9 +24,42 @@
 button {
     flex-direction: column;
     position: relative;
-    left: 1000px;
+    left: 900px;
     top: -45px;
     text-transform: uppercase;
     height: 30px;
     width: 50px;
 }
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
+    height: 500px;
+    background-color: cornflowerblue;
+    margin-left: 200px;
+    padding-top: 50px;
+    border-radius: 0 0 5px 5px;
+}
+
+.to-do, .doing, .done {
+    width: 250px;
+    height: 400px;
+    background-color: azure;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px grey;
+}
+
+.to-do div, .doing div, .done div {
+    padding-left: 85px;
+    padding-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: azure;
+    height: 60px;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 1rem solid darkcyan;
+}
+
+
