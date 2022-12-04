@@ -3,16 +3,28 @@
     margin: 0;
     padding: 0;
 }
-
-.task-input {
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 1200px;
+    background-color: aliceblue;
+}
+.header {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 60px;
     width: 70%;
-    margin-top: 50px;
-    margin-left: 200px;
     background-color: cornflowerblue;
     border-radius: 5px 5px 0 0;
     box-shadow: 3px 3px 3px grey;
@@ -22,8 +34,7 @@
     height: 30px;
     font-size: 20px;
 }
-button {
-    flex-direction: column;
+.add {
     text-transform: uppercase;
     margin-left: 20px;
     height: 30px;
@@ -36,7 +47,6 @@ button {
     width: 70%;
     height: 500px;
     background-color: cornflowerblue;
-    margin-left: 200px;
     margin-top: 10px;
     padding-top: 50px;
     border-radius: 0 0 5px 5px;
@@ -47,20 +57,44 @@ button {
     width: 250px;
     height: 400px;
     background-color: azure;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 3px 3px 3px grey;
 }
 
-.to-do div, .doing div, .done div {
+.to-do-header, .done-header, .doing-header {
     padding-left: 85px;
     padding-top: 10px;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
     text-transform: uppercase;
     background-color: azure;
     height: 60px;
-    border-radius: 20px 20px 0 0;
+    border-radius: 10px 10px 0 0;
     border-bottom: 1rem solid darkcyan;
 }
 
+.new-div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    align-items: center;
+    font-size: 30px;
+    color: ghostwhite;
+    height: 70px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: darkgrey;
+    box-shadow: 3px 3px 3px black;
+}
+
+.arrow-button {
+    height: 40px;
+    width: 40px;
+    z-index: 100;
+}
+
+i {
+    height: 50px;
+    width: 50px;
+}
 
