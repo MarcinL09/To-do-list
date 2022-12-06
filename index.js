@@ -1,31 +1,42 @@
 const addButtonElement = document.querySelector('.add');
 const inputElement = document.querySelector('#task');
-const deleteButton = document.createElement('button');
-deleteButton.classList.add('arrow-button');
+
+let newDiv;
 
 const toDo = document.querySelector('.to-do');
 function addNewToDo() {
     if (inputElement.value !== '') {
-        const newDiv = document.createElement('div');
+        newDiv = document.createElement('div');
         newDiv.classList.add('new-div');
         toDo.append(newDiv);
         newDiv.append(inputElement.value);
-        newDiv.append(deleteButton);
+        createToolsArea()
 
         inputElement.value = '';
     }
 }
 
-deleteButton.addEventListener('click', function (){
-    .remove();
-})
+function createToolsArea() {
+    const toolsPanel = document.createElement('div');
+    toolsPanel.classList.add('tools')
+    newDiv.append(toolsPanel);
 
-addButtonElement.addEventListener('click', addNewToDo);
+    const deleteButton = document.createElement('button')
+    deleteButton.classList.add('delete');
+    deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+
+    const arrowButton = document.createElement('button')
+    arrowButton.classList.add('arrow');
+    arrowButton.innerHTML = '<i class="fa-solid fa-arrow-right"></i>';
+
+    toolsPanel.append(deleteButton, arrowButton);
+}
+
 
 function enterKeyCheck(e) {
     if (e.key === 'Enter') {
         addNewToDo();
     }
 }
-
+addButtonElement.addEventListener('click', addNewToDo);
 inputElement.addEventListener('keyup', enterKeyCheck);
