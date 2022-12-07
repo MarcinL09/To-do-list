@@ -49,11 +49,11 @@ body {
     background-color: white;
     text-transform: uppercase;
     cursor: pointer;
-    transition: color .3s, background-color .3s;
 }
 .add:hover {
     color: #fff;
     background-color: black;
+    transition: color .8s, background-color .8s;
 }
 .container {
     display: flex;
@@ -129,13 +129,16 @@ body {
     font-size: 20px;
 }
 
-.arrow:hover, .delete:hover {
-    color: crimson;
-}
-
 .left-arrow {
     font-size: 20px;
 }
+
+.arrow:hover, .delete:hover, .left-arrow:hover {
+    color: crimson;
+    transition: color .7s;
+}
+
+
 
 
 

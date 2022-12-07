@@ -8,7 +8,8 @@ let newDiv;
 
 
 const toDo = document.querySelector('.to-do');
-const doing = document.querySelector('.doing')
+const doing = document.querySelector('.doing');
+const done = document.querySelector('.done');
 function addNewToDo() {
     if (inputElement.value !== '') {
         newDiv = document.createElement('div');
@@ -24,6 +25,13 @@ function addNewToDo() {
         doing.append(newDiv);
         leftArrowButton.addEventListener('click', function(){
             toDo.append(newDiv);
+        });
+        rightArrowButton.addEventListener('click', addNewDone);
+    }
+    function addNewDone() {
+        done.append(newDiv);
+        leftArrowButton.addEventListener('click', function (){
+           doing.append(newDiv);
         });
     }
 }
