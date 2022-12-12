@@ -26,14 +26,6 @@ function deleteClick(event) {
     event.target.closest('.new-div').remove();
 }
 
-// function addNewDoing() {
-//         newDiv = document.createElement('div');
-//         newDiv.classList.add('new-div');
-//         doing.append(newDiv);
-//         newDiv.append(inputElementCloned);
-//         createToolsArea()
-//     // if leftArrowButton
-// }
 
 function enterKeyCheck(event) {
     if (event.key === 'Enter') {
