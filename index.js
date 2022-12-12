@@ -22,7 +22,7 @@ function addNewToDo() {
         newDiv.textContent = inputElement.value;
         inputElement.value = '';
     }
-    moveNewDivElementToNewSection()
+    moveNewDivElementToNewSection();
 }
 function moveNewDivElementToNewSection() {
     const clonedNewDiv = newDiv.cloneNode(true);
