@@ -5,8 +5,9 @@ let deleteButton;
 let rightArrowButton;
 let deleteButtonDoingSection;
 let rightArrowButtonDoingSection;
-
-let leftArrowButton;
+let leftArrowButtonDoingSection;
+let deleteButtonDoneSection;
+let leftArrowButtonDoneSection;
 let newDiv;
 
 const toDo = document.querySelector('.to-do');
@@ -25,6 +26,7 @@ function addNewToDo() {
 }
 function moveNewDivElementToNewSection() {
     const clonedNewDiv = newDiv.cloneNode(true);
+    const clonedNewDivDoneSection = newDiv.cloneNode(true);
     rightArrowButton = document.createElement('button')
     rightArrowButton.classList.add('arrow');
     rightArrowButton.innerHTML = '<i class="fa-solid fa-arrow-right"></i>';
@@ -48,22 +50,43 @@ function moveNewDivElementToNewSection() {
     deleteButtonDoingSection = document.createElement('button');
     deleteButtonDoingSection.classList.add('delete-button');
     deleteButtonDoingSection.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+
+
+    leftArrowButtonDoingSection = document.createElement('button')
+    leftArrowButtonDoingSection.classList.add('left-arrow');
+    leftArrowButtonDoingSection.innerHTML = '<i class="fa-solid fa-arrow-left"></i>';
+
     clonedNewDiv.append(deleteButtonDoingSection);
     clonedNewDiv.append(rightArrowButtonDoingSection);
-
-
-    leftArrowButton = document.createElement('button')
-    leftArrowButton.classList.add('left-arrow');
-    leftArrowButton.innerHTML = '<i class="fa-solid fa-arrow-left"></i>';
-    clonedNewDiv.append(leftArrowButton);
-    leftArrowButton.addEventListener('click', function (){
+    clonedNewDiv.append(leftArrowButtonDoingSection);
+    leftArrowButtonDoingSection.addEventListener('click', function (){
         toDo.append(newDiv);
         clonedNewDiv.remove();
     })
-    rightArrowButton2.addEventListener('click', function (){
-        done.append(clonedNewDiv);
+    rightArrowButtonDoingSection.addEventListener('click', function (){
+        done.append(clonedNewDivDoneSection);
+        clonedNewDiv.remove();
     })
-    deleteButton2.addEventListener('click', deleteClick)
+
+    // done section
+    deleteButtonDoneSection = document.createElement('button');
+    deleteButtonDoneSection.classList.add('delete-button');
+    deleteButtonDoneSection.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+
+    leftArrowButtonDoneSection = document.createElement('button')
+    leftArrowButtonDoneSection.classList.add('left-arrow');
+    leftArrowButtonDoneSection.innerHTML = '<i class="fa-solid fa-arrow-left"></i>';
+
+    clonedNewDivDoneSection.append(deleteButtonDoneSection);
+    clonedNewDivDoneSection.append(leftArrowButtonDoneSection);
+
+    leftArrowButtonDoneSection.addEventListener('click', function(){
+        doing.append(clonedNewDiv);
+        clonedNewDivDoneSection.remove();
+    })
+
+    deleteButtonDoneSection.addEventListener('click', deleteClick)
+    deleteButtonDoingSection.addEventListener('click', deleteClick)
     deleteButton.addEventListener('click', deleteClick);
 }
 
