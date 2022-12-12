@@ -94,6 +94,7 @@ body {
 .new-div {
     display: flex;
     flex-direction: column;
+
     padding-top: 10px;
     align-items: center;
     font-size: 30px;
@@ -133,9 +134,15 @@ body {
     font-size: 20px;
 }
 
+
 .arrow:hover, .delete:hover, .left-arrow:hover {
     color: crimson;
     transition: color .7s;
+}
+
+.new-div-buttons {
+    display: flex;
+    flex-direction: row;
 }
 
 

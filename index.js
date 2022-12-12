@@ -9,6 +9,7 @@ let leftArrowButtonDoingSection;
 let deleteButtonDoneSection;
 let leftArrowButtonDoneSection;
 let newDiv;
+let newDivChild;
 
 const toDo = document.querySelector('.to-do');
 const doing = document.querySelector('.doing');
@@ -18,24 +19,28 @@ function addNewToDo() {
     if (inputElement.value !== '') {
         newDiv = document.createElement('div');
         newDiv.classList.add('new-div');
+        newDivChild = document.createElement('div');
+        newDivChild.classList.add('new-div-buttons');
         toDo.append(newDiv);
         newDiv.textContent = inputElement.value;
+        newDiv.append(newDivChild);
         inputElement.value = '';
     }
     moveNewDivElementToNewSection();
 }
 function moveNewDivElementToNewSection() {
     const clonedNewDiv = newDiv.cloneNode(true);
-    const clonedNewDivDoneSection = newDiv.cloneNode(true);
+    const clonedNewDivChild = newDivChild.cloneNode(true);
+    const clonedNewDivChildDoneSection = newDivChild.cloneNode(true)
     rightArrowButton = document.createElement('button')
     rightArrowButton.classList.add('arrow');
     rightArrowButton.innerHTML = '<i class="fa-solid fa-arrow-right"></i>';
-    newDiv.append(rightArrowButton);
+    newDivChild.append(rightArrowButton);
 
     deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-button');
     deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
-    newDiv.append(deleteButton);
+    newDivChild.append(deleteButton);
 
     rightArrowButton.addEventListener('click', function (){
         doing.append(clonedNewDiv);
@@ -56,15 +61,16 @@ function moveNewDivElementToNewSection() {
     leftArrowButtonDoingSection.classList.add('left-arrow');
     leftArrowButtonDoingSection.innerHTML = '<i class="fa-solid fa-arrow-left"></i>';
 
-    clonedNewDiv.append(deleteButtonDoingSection);
-    clonedNewDiv.append(rightArrowButtonDoingSection);
-    clonedNewDiv.append(leftArrowButtonDoingSection);
+    clonedNewDiv.append(clonedNewDivChild);
+    clonedNewDivChild.append(deleteButtonDoingSection);
+    clonedNewDivChild.append(rightArrowButtonDoingSection);
+    clonedNewDivChild.append(leftArrowButtonDoingSection);
     leftArrowButtonDoingSection.addEventListener('click', function (){
         toDo.append(newDiv);
         clonedNewDiv.remove();
     })
     rightArrowButtonDoingSection.addEventListener('click', function (){
-        done.append(clonedNewDivDoneSection);
+        done.append(clonedNewDiv);
         clonedNewDiv.remove();
     })
 
@@ -77,12 +83,12 @@ function moveNewDivElementToNewSection() {
     leftArrowButtonDoneSection.classList.add('left-arrow');
     leftArrowButtonDoneSection.innerHTML = '<i class="fa-solid fa-arrow-left"></i>';
 
-    clonedNewDivDoneSection.append(deleteButtonDoneSection);
-    clonedNewDivDoneSection.append(leftArrowButtonDoneSection);
+    clonedNewDivChildDoneSection.append(deleteButtonDoneSection);
+    clonedNewDivChildDoneSection.append(leftArrowButtonDoneSection);
 
     leftArrowButtonDoneSection.addEventListener('click', function(){
         doing.append(clonedNewDiv);
-        clonedNewDivDoneSection.remove();
+        clonedNewDiv.remove();
     })
 
     deleteButtonDoneSection.addEventListener('click', deleteClick)
