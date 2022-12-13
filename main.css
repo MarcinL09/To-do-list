@@ -94,9 +94,8 @@ body {
 .new-div {
     display: flex;
     flex-direction: column;
-
-    padding-top: 10px;
     align-items: center;
+    padding-top: 10px;
     font-size: 30px;
     height: 90px;
     margin: 10px;
@@ -104,45 +103,29 @@ body {
     box-shadow: 3px 3px 3px 3px black;
 }
 
-.tools {
-    display: inline-block;
-    height: 30px;
+.new-div-buttons {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
 }
 
-.tools button {
-    padding: 5px 5px;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: background-color .3s;
-}
-.tools button:hover {
-    background-color: transparent;
-}
-
-.arrow {
-    margin-left: 60px;
+.arrow, .delete-button, .left-arrow, .delete-button-done, .left-arrow-done, .delete-button-doing {
     font-size: 20px;
 }
 
-.delete {
-    margin-left: 60px;
-    font-size: 20px;
+.delete-button {
+    margin-left: 90px;
 }
 
-.left-arrow {
-    font-size: 20px;
+.delete-button-done {
+    margin-right: 90px;
 }
-
 
 .arrow:hover, .delete:hover, .left-arrow:hover {
     color: crimson;
     transition: color .7s;
-}
-
-.new-div-buttons {
-    display: flex;
-    flex-direction: row;
 }
 
 
