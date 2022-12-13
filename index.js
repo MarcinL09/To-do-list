@@ -19,14 +19,18 @@ function addNewToDo() {
     if (inputElement.value !== '') {
         newDiv = document.createElement('div');
         newDiv.classList.add('new-div');
+        newDiv.textContent = inputElement.value;
         newDivChild = document.createElement('div');
         newDivChild.classList.add('new-div-buttons');
         toDo.append(newDiv);
-        newDiv.textContent = inputElement.value;
         newDiv.append(newDivChild);
+        console.log(newDiv);
+        moveNewDivElementToNewSection();
         inputElement.value = '';
+    } else {
+        alert('You have to add a task')
     }
-    moveNewDivElementToNewSection();
+
 }
 function moveNewDivElementToNewSection() {
     // cloned elements
