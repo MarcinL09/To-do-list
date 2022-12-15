@@ -62,6 +62,9 @@ function addNewToDoAndMoveElement() {
             clonedNewDivDone.remove();
         })
         inputElement.value = ''
+    } else {
+        alert('You have to add a task')
+    }
 }
 function createButtonArea() {
     deleteButton = document.createElement('button');
@@ -99,9 +102,9 @@ function deleteClick(event) {
 
 function enterKeyCheck(event) {
     if (event.key === 'Enter') {
-        addNewToDo();
+        addNewToDoAndMoveElement();
     }
 }
 
-addButtonElement.addEventListener('click', addNewToDo);
+addButtonElement.addEventListener('click', addNewToDoAndMoveElement);
 inputElement.addEventListener('keyup', enterKeyCheck);
