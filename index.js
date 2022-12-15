@@ -14,7 +14,7 @@ let leftArrowButtonDoneSection;
 let newDiv;
 let newDivChild;
 
-function addNewToDo() {
+function addNewToDoAndMoveElement() {
     if (inputElement.value !== '') {
         newDiv = document.createElement('div');
         newDiv.classList.add('new-div');
@@ -24,16 +24,9 @@ function addNewToDo() {
         newDivChild.classList.add('new-div-buttons');
 
         toDo.append(newDiv);
-        newDiv.append(newDivChild);
-
-        inputElement.value = '';
-        for (let i = 0; i < newDiv.length; i++) {
-            newDiv[i].addEventListener("click", moveNewDivElementToNewSection);
-        };
-    } else {
-        alert('You have to add a task')
-    }
-
+        const clone = newDiv.cloneNode(true)
+        const clonedNewDiv = newDiv.cloneNode(true);
+        const clonedNewDivDone = newDiv.cloneNode(true)
 }
 function createButtonArea() {
     deleteButton = document.createElement('button');
