@@ -36,7 +36,6 @@ function addNewToDo() {
 
 }
 function createButtonArea() {
-    // button elements
     deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-button');
     deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
@@ -64,10 +63,6 @@ function createButtonArea() {
     leftArrowButtonDoneSection = document.createElement('button')
     leftArrowButtonDoneSection.classList.add('left-arrow-done');
     leftArrowButtonDoneSection.innerHTML = '<i class="fa-solid fa-arrow-left"></i>';
-
-    deleteButtonDoneSection.addEventListener('click', deleteClick)
-    deleteButtonDoingSection.addEventListener('click', deleteClick)
-    deleteButton.addEventListener('click', deleteClick);
 }
 
 function deleteClick(event) {
