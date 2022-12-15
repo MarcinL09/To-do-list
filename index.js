@@ -26,7 +26,20 @@ function addNewToDoAndMoveElement() {
         toDo.append(newDiv);
         const clone = newDiv.cloneNode(true)
         const clonedNewDiv = newDiv.cloneNode(true);
-        const clonedNewDivDone = newDiv.cloneNode(true)
+        const clonedNewDivDone = newDiv.cloneNode(true);
+        newDiv.append(newDivChild);
+        const cloneChild = newDivChild.cloneNode(true)
+        const clonedNewDivChild = newDivChild.cloneNode(true);
+        const clonedNewDivChildDone = newDivChild.cloneNode(true);
+        createButtonArea();
+        toDo.append(clone);
+        clone.append(cloneChild);
+        clonedNewDiv.append(clonedNewDivChild);
+        clonedNewDivDone.append(clonedNewDivChildDone);
+        newDiv.remove();
+        cloneChild.append(deleteButton, rightArrowButton);
+        clonedNewDivChild.append(leftArrowButtonDoingSection, deleteButtonDoingSection, rightArrowButtonDoingSection);
+        clonedNewDivChildDone.append(leftArrowButtonDoneSection, deleteButtonDoneSection);
 }
 function createButtonArea() {
     deleteButton = document.createElement('button');
