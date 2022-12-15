@@ -44,6 +44,24 @@ function addNewToDoAndMoveElement() {
         deleteButton.addEventListener('click', deleteClick);
         deleteButtonDoingSection.addEventListener('click', deleteClick);
         deleteButtonDoneSection.addEventListener('click', deleteClick);
+
+        rightArrowButton.addEventListener('click', function(event){
+            doing.append(clonedNewDiv);
+            event.target.closest('.new-div').remove();
+        })
+        leftArrowButtonDoingSection.addEventListener('click', function (){
+            toDo.append(clone);
+            clonedNewDiv.remove();
+        });
+        rightArrowButtonDoingSection.addEventListener('click', function (){
+            done.append(clonedNewDivDone);
+            clonedNewDiv.remove();
+        })
+        leftArrowButtonDoneSection.addEventListener('click', function (){
+            doing.append(clonedNewDiv);
+            clonedNewDivDone.remove();
+        })
+        inputElement.value = ''
 }
 function createButtonArea() {
     deleteButton = document.createElement('button');
