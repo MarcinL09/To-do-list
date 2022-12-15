@@ -40,6 +40,10 @@ function addNewToDoAndMoveElement() {
         cloneChild.append(deleteButton, rightArrowButton);
         clonedNewDivChild.append(leftArrowButtonDoingSection, deleteButtonDoingSection, rightArrowButtonDoingSection);
         clonedNewDivChildDone.append(leftArrowButtonDoneSection, deleteButtonDoneSection);
+
+        deleteButton.addEventListener('click', deleteClick);
+        deleteButtonDoingSection.addEventListener('click', deleteClick);
+        deleteButtonDoneSection.addEventListener('click', deleteClick);
 }
 function createButtonArea() {
     deleteButton = document.createElement('button');
