@@ -72,9 +72,10 @@ body {
 .to-do, .doing, .done {
     width: 250px;
     height: 400px;
-    background-color: rgb(245, 245, 245);;
+    background-color: rgb(245, 245, 245);
     border-radius: 10px;
     box-shadow: 3px 3px 3px grey;
+    overflow: auto;
 }
 
 .to-do-header, .done-header, .doing-header {
@@ -114,7 +115,7 @@ body {
     height: 25px;
     width: 25px;
     font-size: 20px;
-    background-color: white;
+    background-color: rgb(245, 245, 245);
     border: none;
     border-radius: 5px;
 }
