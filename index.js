@@ -4,23 +4,13 @@ const toDo = document.querySelector('.to-do');
 const doing = document.querySelector('.doing');
 const done = document.querySelector('.done');
 
-let deleteButton;
-let rightArrowButton;
-let deleteButtonDoingSection;
-let rightArrowButtonDoingSection;
-let leftArrowButtonDoingSection;
-let deleteButtonDoneSection;
-let leftArrowButtonDoneSection;
-let newDiv;
-let newDivChild;
-
 function addNewToDoAndMoveElement() {
     if (inputElement.value !== '') {
-        newDiv = document.createElement('div');
+        const newDiv = document.createElement('div');
         newDiv.classList.add('new-div');
         newDiv.textContent = inputElement.value;
 
-        newDivChild = document.createElement('div');
+        const newDivChild = document.createElement('div');
         newDivChild.classList.add('new-div-buttons');
 
         toDo.append(newDiv);
@@ -67,6 +57,7 @@ function addNewToDoAndMoveElement() {
     }
 }
 function createButtonArea() {
+
     deleteButton = document.createElement('button');
     deleteButton.classList.add('delete-button', 'button');
     deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
@@ -94,6 +85,16 @@ function createButtonArea() {
     leftArrowButtonDoneSection = document.createElement('button')
     leftArrowButtonDoneSection.classList.add('left-arrow-done', 'button');
     leftArrowButtonDoneSection.innerHTML = '<i class="fa-solid fa-arrow-left"></i>';
+
+    return {
+        deleteButton,
+        deleteButtonDoingSection,
+        deleteButtonDoneSection,
+        rightArrowButton,
+        rightArrowButtonDoingSection,
+        leftArrowButtonDoingSection,
+        leftArrowButtonDoneSection,
+    }
 }
 
 function deleteClick(event) {
