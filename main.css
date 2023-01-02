@@ -68,7 +68,6 @@ body {
     border-top: none;
     box-shadow: 3px 3px 3px grey;
 }
-
 .to-do, .doing, .done {
     width: 250px;
     height: 400px;
@@ -77,7 +76,6 @@ body {
     box-shadow: 3px 3px 3px grey;
     overflow: auto;
 }
-
 .to-do-header, .done-header, .doing-header {
     padding-left: 85px;
     padding-top: 10px;
@@ -90,7 +88,6 @@ body {
     border-radius: 10px 10px 0 0;
     border-bottom: thick double darkgrey;
 }
-
 .new-div {
     display: flex;
     flex-direction: column;
@@ -102,7 +99,6 @@ body {
     border-radius: 15px;
     box-shadow: 3px 3px 3px 3px black;
 }
-
 .new-div-buttons {
     width: 200px;
     display: flex;
@@ -110,8 +106,7 @@ body {
     justify-content: space-between;
     margin-top: 5px;
 }
-
-.arrow, .delete-button, .left-arrow, .delete-button-done, .left-arrow-done, .delete-button-doing {
+.button {
     height: 25px;
     width: 25px;
     font-size: 20px;
@@ -119,21 +114,14 @@ body {
     border: none;
     border-radius: 5px;
 }
-
-.arrow:hover, .delete-button:hover, .left-arrow:hover, .delete-button-done:hover, .left-arrow-done:hover, .delete-button-doing:hover {
-    height: 25px;
-    width: 25px;
-    font-size: 20px;
+.button:hover {
     color:white;
     background-color: black;
     transition: color .8s, background-color .8s;
-    border-radius: 5px;
 }
-
 .delete-button {
     margin-left: 90px;
 }
-
 .delete-button-done {
     margin-right: 90px;
 }

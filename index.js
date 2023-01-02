@@ -68,31 +68,31 @@ function addNewToDoAndMoveElement() {
 }
 function createButtonArea() {
     deleteButton = document.createElement('button');
-    deleteButton.classList.add('delete-button');
+    deleteButton.classList.add('delete-button', 'button');
     deleteButton.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 
     deleteButtonDoingSection = document.createElement('button');
-    deleteButtonDoingSection.classList.add('delete-button-doing');
+    deleteButtonDoingSection.classList.add('delete-button-doing', 'button');
     deleteButtonDoingSection.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 
     deleteButtonDoneSection = document.createElement('button');
-    deleteButtonDoneSection.classList.add('delete-button-done');
+    deleteButtonDoneSection.classList.add('delete-button-done', 'button');
     deleteButtonDoneSection.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
 
     rightArrowButton = document.createElement('button')
-    rightArrowButton.classList.add('arrow');
+    rightArrowButton.classList.add('arrow', 'button');
     rightArrowButton.innerHTML = '<i class="fa-solid fa-arrow-right"></i>';
 
     rightArrowButtonDoingSection = document.createElement('button')
-    rightArrowButtonDoingSection.classList.add('arrow');
+    rightArrowButtonDoingSection.classList.add('arrow', 'button');
     rightArrowButtonDoingSection.innerHTML = '<i class="fa-solid fa-arrow-right"></i>';
 
     leftArrowButtonDoingSection = document.createElement('button')
-    leftArrowButtonDoingSection.classList.add('left-arrow');
+    leftArrowButtonDoingSection.classList.add('left-arrow', 'button');
     leftArrowButtonDoingSection.innerHTML = '<i class="fa-solid fa-arrow-left"></i>';
 
     leftArrowButtonDoneSection = document.createElement('button')
-    leftArrowButtonDoneSection.classList.add('left-arrow-done');
+    leftArrowButtonDoneSection.classList.add('left-arrow-done', 'button');
     leftArrowButtonDoneSection.innerHTML = '<i class="fa-solid fa-arrow-left"></i>';
 }
 
