@@ -4,9 +4,26 @@
       <meta charset="UTF-8">
       <title>To-do list</title>
       <link href="main.css" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/dcf9b245b0.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="task-input"><input id="task" placeholder="Task name"/></div>
-    <button>add</button>
+      <div class="wrapper">
+        <div class="header">
+            <input id="task" placeholder="Task name"/>
+            <button class="add">add</button>
+        </div>
+        <div class="container">
+            <div class="to-do">
+                <div class="to-do-header">To do</div>
+            </div>
+            <div class="doing">
+                <div class="doing-header">doing</div>
+            </div>
+            <div class="done">
+                <div class="done-header">done</div>
+            </div>
+        </div>
+      </div>
+  <script src="index.js"></script>
   </body>
 </html>
