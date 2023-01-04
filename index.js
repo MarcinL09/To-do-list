@@ -4,8 +4,6 @@ const toDo = document.querySelector('.to-do');
 const doing = document.querySelector('.doing');
 const done = document.querySelector('.done');
 
-
-
 function addNewToDoAndMoveElement() {
     if (inputElement.value !== '') {
         const newDiv = document.createElement('div');
