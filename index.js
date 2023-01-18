@@ -5,6 +5,9 @@ const doing = document.querySelector('.doing');
 const done = document.querySelector('.done');
 
 function addNewToDoAndMoveElement() {
+    if (!inputElement.value) {
+        return alert('You have to add a task')
+    }
     if (inputElement.value !== '') {
         const newDiv = document.createElement('div');
         newDiv.classList.add('new-div');
@@ -35,27 +38,25 @@ function addNewToDoAndMoveElement() {
         deleteButtonDoingSection.addEventListener('click', deleteClick);
         deleteButtonDoneSection.addEventListener('click', deleteClick);
 
-        rightArrowButton.addEventListener('click', function(event){
+        rightArrowButton.addEventListener('click', function (event) {
             doing.append(clonedNewDiv);
             event.target.closest('.new-div').remove();
-        })
-        leftArrowButtonDoingSection.addEventListener('click', function (){
+        });
+        leftArrowButtonDoingSection.addEventListener('click', function () {
             toDo.append(clone);
             clonedNewDiv.remove();
         });
-        rightArrowButtonDoingSection.addEventListener('click', function (){
+        rightArrowButtonDoingSection.addEventListener('click', function () {
             done.append(clonedNewDivDone);
             clonedNewDiv.remove();
-        })
-        leftArrowButtonDoneSection.addEventListener('click', function (){
+        });
+        leftArrowButtonDoneSection.addEventListener('click', function () {
             doing.append(clonedNewDiv);
             clonedNewDivDone.remove();
-        })
-        inputElement.value = ''
-    } else {
-        alert('You have to add a task')
+        });
     }
 }
+
 function createButtonArea() {
 
     deleteButton = document.createElement('button');
